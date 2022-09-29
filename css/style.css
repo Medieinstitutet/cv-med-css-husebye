@@ -1,0 +1,253 @@
+/* * {
+    background-color: yellow;
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+/*------------------------------------------------*/
+/*----------------------MAIN----------------------*/
+/*------------------------------------------------*/
+
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+ .container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: white;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    box-shadow: 0 35px 55px rgba( 0, 0, 0, 0.1);
+ }
+
+/*------------------------------------------------*/
+/*----------------------LEFT----------------------*/
+/*------------------------------------------------*/
+
+.container .left-side {
+    position: relative;
+    background: rgb(77, 116, 180);
+    padding: 40px;
+} 
+
+.profile-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px rgba(255, 255, 255, 0.2);
+}
+
+.profile-text .image-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden ;
+}
+
+.profile-text .image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---Text--- */
+
+.profile-text h2 {
+    color: white;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profile-text h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+/* ---Contact--- */
+
+.contact {
+    padding-top: 40px;
+}
+
+.title {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+} 
+
+.contact ul {
+    position: relative;
+}
+
+.contact ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contact ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: lightblue;
+}
+
+.contact ul li span {
+    color: white;
+    font-weight: 300;
+}
+
+/* ---Education--- */
+
+.contact.education li {
+    margin-bottom: 15px;
+    cursor: text;
+}
+
+.contact.education h5 {
+    color: lightblue;
+    font-weight: 500;
+}
+
+.contact.education h4:nth-child(2) {
+    color: white;
+    font-weight: 500;
+}
+
+.contact.education h4 {
+    color: white;
+    font-weight: 300;
+}
+
+/* ---Languages--- */
+
+.contact.language li {
+    margin-bottom: 15px;
+    cursor: text;
+}
+
+.contact.language h4 {
+    color: lightblue;
+    font-weight: 500;
+}
+
+.contact.language h5 {
+    color: white;
+    font-weight: 300;
+} 
+ 
+/*------------------------------------------------*/
+/*---------------------RIGHT----------------------*/
+/*------------------------------------------------*/
+
+.container .right-side {
+    position: relative;
+    background: rgb(23, 85, 154); 
+    padding: 40px;
+} 
+
+/* ---PROFILE--- */
+
+.about {
+    margin-bottom: 50px;
+}
+
+.about:last-child {
+    margin-bottom: 0;
+}
+
+.title2 {
+    color: honeydew;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+p {
+    color: honeydew;
+    font-weight: 300;
+}
+
+/* ---EXPERIENCE--- */
+
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box .year_place {
+    min-width: 150px;
+}
+
+.about .box .year_place h5 {
+    text-transform: uppercase;
+    color: lightblue;
+    font-weight: 600;
+}
+
+.about .box .text h4 {
+    text-transform: uppercase;
+    color: lightblue;
+    font-size: 16px;
+}
+
+.mumu {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 3%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mumu img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*------------------------------------------------*/
+/*---------------------LAYOUT---------------------*/
+/*------------------------------------------------*/
+
+@media (max-width: 700px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .contact {
+        text-align: center;
+    }
+}
